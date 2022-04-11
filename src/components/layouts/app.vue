@@ -88,7 +88,7 @@ const handleTabs = (menu, action) => {
   }
 }
 onMounted(() => {
-  let routes = JSON.parse(dingfei.getStorage("routes"));
+  let routes = lodash.filter(JSON.parse(dingfei.getStorage("routes")),o=>o.type!="res");
   let appsettings = JSON.parse(dingfei.getStorage("appsettings"));
   //设置菜单
   let menus = dingfei.getTree(routes, appsettings.defaultLayout == "host" ? 1 : null)

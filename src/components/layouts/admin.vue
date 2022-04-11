@@ -46,7 +46,7 @@
 <script  setup>
 import { ref, onMounted, lodash, reactive } from '@/apis'
 import treemenu from './treemenu.vue'
-const routes = JSON.parse(dingfei.getStorage("routes"));
+const routes = lodash.filter(JSON.parse(dingfei.getStorage("routes")),o=>o.type!="res");
 const headMenus = ref()
 const leftMenus = ref()
 const navmod = ref()
