@@ -4,12 +4,12 @@ server {
     listen       8080;
     server_name  localhost;
     location / {
-        root  C:\Users\Administrator\Desktop\dfwebhost\dist;
+        root  C:\Users\Administrator\Desktop\vue-admin\dist;
         try_files $uri $uri/ /index.html;
     }	
-    location ^~ /mods/temp {
-        alias C:\Users\Administrator\Desktop\dfwebhost\dist\mods\ceshi;
-        try_files $uri $uri/ /mods/temp/index.html;
+    location ^~ /xxx {
+        alias C:\Users\Administrator\Desktop\vue-admin\dist\xxx;
+        try_files $uri $uri/ /index.html;
     }
 }
 #```
@@ -36,14 +36,14 @@ server {
 #### routes.json
 #```
 {
-		"id": "",//编号
-		"title": "",//标题
-		"pid": 0,//父编号
-		"path": "",//访问地址
+	"id": "",//编号
+	"title": "",//标题
+	"pid": 0,//父编号
+	"path": "",//访问地址
     "component":"#"//组件地址
-		"type": "cat nav res",//页面类型 【目录（cat）>菜单（nav）>资源（res）】
-		"level": 1,//级别
-		"idx": 0,//排序
+	"type": "cat nav res",//页面类型 【目录（cat）>菜单（nav）>资源（res）】
+	"level": 1,//级别
+	"idx": 0,//排序
     "default":true/false,//是否默认页
     "ids":""//编号集合(','号分割)
     "meta":{
@@ -52,5 +52,5 @@ server {
       "width":0,//弹窗宽度
       "height":0//弹窗高度
     }
-	}
+}
 #```
